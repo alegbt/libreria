@@ -4,9 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c767e97-ccbc-4b74-b2c3-c72a099c7c11" name="Changes" comment="commit b4 autori new class">
-      <change afterPath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/controller/AutoriController.java" afterDir="false" />
+    <list default="true" id="4c767e97-ccbc-4b74-b2c3-c72a099c7c11" name="Changes" comment="commit b4 auto generate constraint key">
+      <change afterPath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/controller/DTO/AuthorAndBookDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/controller/AutoriController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/controller/AutoriController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/controller/LibriController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/controller/LibriController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/mapper/AutoriMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/mapper/AutoriMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/mapper/LibriMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/mapper/LibriMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/model/Autori.java" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/model/Autori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/model/AutoriExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/model/AutoriExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/model/Libri.java" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/model/Libri.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/model/LibriExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/model/LibriExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libreria/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/resources/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libreria/src/main/resources/mybatis/mapper/AutoriMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/resources/mybatis/mapper/AutoriMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libreria/src/main/resources/mybatis/mapper/LibriMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/resources/mybatis/mapper/LibriMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +26,13 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -105,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699270876478</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="commit b4 auto generate constraint key">
+      <created>1699279826090</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699279826090</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,7 +148,8 @@
     <MESSAGE value="added deleteall appunti.txt inserbooks" />
     <MESSAGE value="added selectByPriceGreaterThan" />
     <MESSAGE value="commit b4 autori new class" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit b4 autori new class" />
+    <MESSAGE value="commit b4 auto generate constraint key" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit b4 auto generate constraint key" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

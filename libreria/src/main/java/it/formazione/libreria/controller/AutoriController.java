@@ -1,5 +1,6 @@
 package it.formazione.libreria.controller;
 
+import it.formazione.libreria.controller.DTO.AuthorAndBookDTO;
 import it.formazione.libreria.mybatis.mapper.AutoriMapper;
 import it.formazione.libreria.mybatis.mapper.LibriMapper;
 import it.formazione.libreria.mybatis.model.Autori;
@@ -23,6 +24,9 @@ public class AutoriController {
 	
 	@Autowired
 	private AutoriMapper autoriMapper;
+
+	@Autowired
+	private LibriMapper libriMapper;
 
 
 	@GetMapping(value = "/selectAll", produces = "application/json")
@@ -94,7 +98,24 @@ public class AutoriController {
 
 
 
+	@PostMapping(value = "/insertNewAutoreWithBook", produces = "application/json")
+	public AuthorAndBookDTO addNewAutoreAndBook(@RequestBody AuthorAndBookDTO authorAndBookDTO) {
+		Autori newAutore = new Autori();
+		newAutore.setNomeAutore(authorAndBookDTO.getNomeAutore());
+		Libri newLibro = new Libri();
+		newLibro.setNome(authorAndBookDTO.getBookName());
+		newLibro.setPrezzo(authorAndBookDTO.getPrezzo());
+		newLibro.setAutoreId(authorAndBookDTO.getAutoreId());
+		this.autoriMapper.insert(newAutore);
+		this.libriMapper.insert(newLibro);
+		return authorAndBookDTO;
 
+
+
+
+
+
+	}
 
 
 

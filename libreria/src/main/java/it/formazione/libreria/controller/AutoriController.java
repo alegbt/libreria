@@ -8,6 +8,8 @@ import it.formazione.libreria.mybatis.model.AutoriExample;
 import it.formazione.libreria.mybatis.model.Libri;
 import it.formazione.libreria.mybatis.model.LibriExample;
 import jakarta.websocket.server.PathParam;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,6 +29,9 @@ public class AutoriController {
 
 	@Autowired
 	private LibriMapper libriMapper;
+
+	@Autowired
+	private SqlSessionFactory sqlSessionFactory;
 
 
 	@GetMapping(value = "/selectAll", produces = "application/json")
@@ -96,25 +101,28 @@ public class AutoriController {
 	}
 	}
 
-
+	/**
+	 * Con opensession() e close()
+	 */
 
 	@PostMapping(value = "/insertNewAutoreWithBook", produces = "application/json")
 	public AuthorAndBookDTO addNewAutoreAndBook(@RequestBody AuthorAndBookDTO authorAndBookDTO) {
-		Autori newAutore = new Autori();
-		newAutore.setNomeAutore(authorAndBookDTO.getNomeAutore());
-		Libri newLibro = new Libri();
-		newLibro.setNome(authorAndBookDTO.getBookName());
-		newLibro.setPrezzo(authorAndBookDTO.getPrezzo());
-		newLibro.setAutoreId(authorAndBookDTO.getAutoreId());
-		this.autoriMapper.insert(newAutore);
-		this.libriMapper.insert(newLibro);
-		return authorAndBookDTO;
 
-
-
-
-
-
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		try{
+			Autori newAutore = new Autori();
+			newAutore.setNomeAutore(authorAndBookDTO.getNomeAutore());
+			Libri newLibro = new Libri();
+			newLibro.setNome(authorAndBookDTO.getBookName());
+			newLibro.setPrezzo(authorAndBookDTO.getPrezzo());
+			newLibro.setAutoreId(authorAndBookDTO.getAutoreId());
+			this.autoriMapper.insert(newAutore);
+			this.libriMapper.insert(newLibro);
+			sqlSession.commit();
+			return authorAndBookDTO;
+		}finally {
+			sqlSession.close();
+		}
 	}
 
 

@@ -93,4 +93,13 @@ public interface AutoriMapper {
      * @mbg.generated Mon Nov 06 15:27:41 CET 2023
      */
     int updateByPrimaryKey(Autori row);
+
+
+//////////////////////////////////////////MY CODE
+
+    List<Autori> selectAutoriWithLibri();
+
+
+
+
 }

@@ -1,5 +1,8 @@
 package it.formazione.libreria.mybatis.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Autori {
     /**
      *
@@ -66,4 +69,22 @@ public class Autori {
     public void setNomeAutore(String nomeAutore) {
         this.nomeAutore = nomeAutore;
     }
+
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // MY CODE                       ////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    List<Libri> libriAutore = new ArrayList<>();
+    public List<Libri> getLibriAutore() {
+        return libriAutore;
+    }
+    public void setLibriAutore(List<Libri> libriAutore) {
+        this.libriAutore = libriAutore;
+    }
+
+
+
+
+
 }

@@ -236,4 +236,60 @@
     set nome_autore = #{nomeAutore,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+
+
+<!--///////////////////////////////////////////  MY CUSTOM METHODS  ////////////////////////////////////////////////////////////-->
+
+<!--  non mappato bene-->
+
+  <resultMap id="AutoreConLibriResultMap" type="it.formazione.libreria.mybatis.model.Autori">
+    <id property="id" column="id" />
+    <result property="nomeAutore" column="nome_autore" />
+    <collection property="libri" ofType="it.formazione.libreria.mybatis.model.Libri" resultMap="LibroResultMap"/>
+  </resultMap>
+
+  <resultMap id="LibroResultMap" type="it.formazione.libreria.mybatis.model.Libri">
+    <id property="id" column="libro_id" />
+    <result property="nome" column="nome_libro" />
+    <result property="prezzo" column="libro_prezzo" />
+  </resultMap>
+
+  <select id="selectAutoriWithLibri" resultMap="AutoreLibriResultMap">
+    SELECT a.id AS autore_id, a.nome AS nome_autore,
+    l.id AS libro_id, l.nome AS nome_libro, l.prezzo AS libro_prezzo
+    FROM autori a
+    LEFT JOIN libri l ON a.id = l.autore_id
+  </select>
+
+<!--//////////////////////////////////////-->
+
+<!--  controlla qst dovrebbe essere mappato bene-->
+
+  <resultMap id="AutoreResultMap" type="it.formazione.libreria.model.Autori">
+    <id property="id" column="id" />
+    <result property="nomeAutore" column="nome_autore" />
+    <collection property="libriAutore" ofType="it.formazione.libreria.model.Libri" resultMap="LibroResultMap"/>
+  </resultMap>
+
+  <resultMap id="LibroResultMap" type="it.formazione.libreria.model.Libri">
+    <id property="id" column="id" />
+    <result property="nome" column="nome" />
+    <result property="prezzo" column="prezzo" />
+    <!-- Assuming autore_id is a field in Libri, if you want to include it -->
+    <result property="autoreId" column="autore_id" />
+  </resultMap>
+
+  <select id="selectAutoriWithLibri" resultMap="AutoreResultMap">
+    SELECT a.id, a.nome_autore,
+    l.id, l.nome, l.prezzo, l.autore_id
+    FROM autori a
+    LEFT JOIN libri l ON a.id = l.autore_id
+  </select>
+
+
+
+
+
+
 </mapper>

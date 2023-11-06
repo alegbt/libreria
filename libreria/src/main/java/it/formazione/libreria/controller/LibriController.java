@@ -22,7 +22,8 @@ public class LibriController {
 	
 	@Autowired
 	private LibriMapper libriMapper;
-	
+
+
 	/**
 	 * Lettura di tutte le righe
 	 * @return
@@ -36,6 +37,15 @@ public class LibriController {
 	public Libri selectById(@PathParam("id") Integer id) {
 		return this.libriMapper.selectByPrimaryKey(id);
 	}
+
+
+	@GetMapping(value = "selectByPriceGreaterThan/{price}")
+	public List<Libri> selectByPriceGreaterThan(@PathVariable Integer price){
+		LibriExample example = new LibriExample();
+		example.createCriteria().andPrezzoGreaterThan(price);
+		return this.libriMapper.selectByExample(example);
+	}
+
 	
 	@PostMapping(value = "/insertBook", produces = "application/json")
 	public Libri addBook(@RequestBody Libri libro) {
@@ -82,6 +92,10 @@ public class LibriController {
 	}
 
 	}
+
+
+
+
 
 
 

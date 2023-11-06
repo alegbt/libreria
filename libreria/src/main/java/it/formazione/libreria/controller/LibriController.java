@@ -37,14 +37,23 @@ public class LibriController {
 		return this.libriMapper.selectByPrimaryKey(id);
 	}
 	
-	@PostMapping(value = "/insert", produces = "application/json")
-	public Libri selectById(@RequestBody Libri libro) {
+	@PostMapping(value = "/insertBook", produces = "application/json")
+	public Libri addBook(@RequestBody Libri libro) {
 		this.libriMapper.insert(libro);
 		return libro;
 	}
 
-	@PutMapping(value = "/update/{id}", produces = "application/json")
-	public Libri editBookName(@PathVariable("id") Integer id, @RequestParam("newName") String newName){
+	@PostMapping(value = "/insertBooks", produces = "application/json")
+	public List<Libri> addBooks(@RequestBody List<Libri> libri) {
+		for(Libri libro : libri){
+			this.libriMapper.insert(libro);
+		}
+		return libri;
+	}
+
+
+	@PutMapping(value = "/update", produces = "application/json")
+	public Libri editBookName(@RequestParam("id") Integer id, @RequestParam("newName") String newName){
 		Libri bookToUpdate = this.libriMapper.selectByPrimaryKey(id);
 		bookToUpdate.setNome(newName);
 		this.libriMapper.updateByPrimaryKey(bookToUpdate);
@@ -62,6 +71,19 @@ public class LibriController {
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Cannot delete");
 		}
 	}
+
+	@DeleteMapping(value = "/deleteall")
+	public ResponseEntity<?> deleteAll(){
+	try{
+		libriMapper.deleteByExample(new LibriExample());
+		return ResponseEntity.status(HttpStatus.OK).body("Libri table cleared");
+	}catch (Exception e){
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+	}
+
+	}
+
+
 
 
 

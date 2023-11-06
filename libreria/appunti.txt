@@ -1,0 +1,12 @@
+
+
+per resettare gli id da 1
+ALTER TABLE libri AUTO_INCREMENT = 1;
+
+
+per non perdere la proprieta id su java
+<insert id="insert" parameterType="it.formazione.libreria.mybatis.model.Libri" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+
+
+per usare il generatorconfig.xml scrivi nello shell
+mvn mybatis-generator:generate

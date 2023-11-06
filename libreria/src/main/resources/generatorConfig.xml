@@ -15,8 +15,8 @@
 
     <table tableName="libri" />
 
-<!--    -->
-    <table tableName="autori" />
+<!--  questa se avessi una tabella autori  -->
+<!--    <table tableName="autori" />-->d
   </context>
 </generatorConfiguration>
 

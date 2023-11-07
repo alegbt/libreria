@@ -13,10 +13,15 @@
     <javaClientGenerator type="XMLMAPPER" targetPackage="it.formazione.libreria.mybatis.mapper" targetProject="src/main/java"/>
 
 
-    <table tableName="libri" />
 
-<!--  questa se avessi una tabella autori  -->
-    <table tableName="autori" />
+
+
+    <!--  questa se avessi una tabella autori  -->
+    <!--    <table tableName="autori" />-->
+    <table tableName="libri" />
+    <table tableName="casa_editrice" />
+
+
   </context>
 </generatorConfiguration>
 

@@ -285,11 +285,11 @@
     l.id AS libro_id, l.nome, l.prezzo, l.autore_id
     FROM autori a
     LEFT JOIN libri l ON a.id = l.autore_id
-    <where>
-      <if test="idM != null">
+    <where>                        <!-- where fa si che il contenuto sql venga valutato solo se c'e almeno 1 condizione true dentro  dentro ci sono due if, quelli valutati true (la condizione è dopo test) vengono inseriti nella query-->
+      <if test="idM != null">      <!-- idM deve avere lo stesso nome sia a riga sotto che come param in AutoriMapper interface -->
         AND a.id = #{idM,jdbcType=INTEGER}
       </if>
-      <if test="param2 != null">
+      <if test="param2 != null">    <!--param2 deve avere lo stesso nome qui e a riga sotto, ma non serve che il nome sia uguale nel prametro in autoriMapper, deve però essere rispettato il numero (2)-->
         AND l.prezzo > #{param2,jdbcType=INTEGER}
       </if>
     </where>

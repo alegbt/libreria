@@ -106,7 +106,7 @@ public class AutoriController {
 	 */
 
 	@PostMapping(value = "/insertNewAutoreWithBook", produces = "application/json")
-	public AuthorAndBookDTO addNewAutoreAndBook(@RequestBody AuthorAndBookDTO authorAndBookDTO) {
+	public ResponseEntity addNewAutoreAndBook(@RequestBody AuthorAndBookDTO authorAndBookDTO) {
 
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		try{
@@ -119,12 +119,41 @@ public class AutoriController {
 			this.autoriMapper.insert(newAutore);
 			this.libriMapper.insert(newLibro);
 			sqlSession.commit();
-			return authorAndBookDTO;
-		}finally {
+			return ResponseEntity.status(HttpStatus.CREATED).body(authorAndBookDTO);
+		}catch (Exception e){
+			sqlSession.rollback();
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+		} finally {
 			sqlSession.close();
 		}
 	}
 
+
+
+	/**
+	 * TODO metodo che retrieva tutti i libri in base ad 1 autore, definito gia in autorimapper.xml
+	 la query (controllala) ed il metodo in autorimappa (interface)
+	 */
+
+//	@GetMapping(value = "/allBooks", produces="application/json")
+//	public List<Libri>getAuthorBooks(@PathParam("id") Integer id){
+//		return this.autoriMapper.selectAutoriWithLibri(id);
+//	}
+
+	@GetMapping(value = "/allBooks", produces="application/json")
+	public List<Libri>getAuthorBooks(@PathParam("id") Integer id, @PathParam("prezzo") Integer prezzo){
+
+		List<Libri>libriAutore = this.autoriMapper.selectAutoriWithLibri(id, prezzo);
+
+//		for (Libri l:libriAutore) {
+//
+//			int n = libriMapper.selectLibroById(l.getNome());
+//
+//			l.setId(n);
+//		}
+
+	return libriAutore;
+	}
 
 
 

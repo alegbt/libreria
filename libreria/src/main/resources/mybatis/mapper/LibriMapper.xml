@@ -271,4 +271,15 @@
 
 
 <!-- riga 140  &lt;insert id="insert" parameterType="it.formazione.libreria.mybatis.model.Libri" useGeneratedKeys="true" keyColumn="id" keyProperty="id"&gt; permettono di non perdere l'id su java, nel metodo che usa questa insert ritorna 1 obj, senza queste 3 cose ritorna id null -->
+
+
+  <select id="selectLibroById" parameterType="String" resultType="Integer">
+    SELECT id
+    FROM libri
+    WHERE nome = #{nome}
+  </select>
+
+
+
+
 </mapper>

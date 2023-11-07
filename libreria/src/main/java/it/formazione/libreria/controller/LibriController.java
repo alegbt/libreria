@@ -93,10 +93,6 @@ public class LibriController {
 	}
 	}
 
-	/**
-	 * TODO metodo che retrieva tutti i libri in base ad 1 autore, definito gia in autorimapper.xml
-	 		la query (controllala) ed il metodo in autorimappa (interface)
-	 */
 
 
 

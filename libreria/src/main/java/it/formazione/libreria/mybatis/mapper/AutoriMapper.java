@@ -3,6 +3,8 @@ package it.formazione.libreria.mybatis.mapper;
 import it.formazione.libreria.mybatis.model.Autori;
 import it.formazione.libreria.mybatis.model.AutoriExample;
 import java.util.List;
+
+import it.formazione.libreria.mybatis.model.Libri;
 import org.apache.ibatis.annotations.Param;
 
 public interface AutoriMapper {
@@ -97,7 +99,10 @@ public interface AutoriMapper {
 
 //////////////////////////////////////////MY CODE
 
-    List<Autori> selectAutoriWithLibri();
+    List<Libri> selectAutoriWithLibri(Integer idM, Integer prezzol);
+
+
+
 
 
 

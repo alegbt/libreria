@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c767e97-ccbc-4b74-b2c3-c72a099c7c11" name="Changes" comment="insertAutoreWithBook added">
+    <list default="true" id="4c767e97-ccbc-4b74-b2c3-c72a099c7c11" name="Changes" comment="commit 11/6 19:14">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/controller/AutoriController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/controller/AutoriController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/controller/LibriController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/controller/LibriController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/mapper/AutoriMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/mapper/AutoriMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/model/Autori.java" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/model/Autori.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/mapper/LibriMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/mapper/LibriMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libreria/src/main/resources/mybatis/mapper/AutoriMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/resources/mybatis/mapper/AutoriMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libreria/src/main/resources/mybatis/mapper/LibriMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/resources/mybatis/mapper/LibriMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +55,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/aless/Desktop/MyBatis-Demo",
+    "last_opened_file_path": "C:/Users/aless/Desktop/libreria",
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -131,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699284485511</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="commit 11/6 19:14">
+      <created>1699294492809</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699294492809</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -151,7 +158,8 @@
     <MESSAGE value="commit b4 autori new class" />
     <MESSAGE value="commit b4 auto generate constraint key" />
     <MESSAGE value="insertAutoreWithBook added" />
-    <option name="LAST_COMMIT_MESSAGE" value="insertAutoreWithBook added" />
+    <MESSAGE value="commit 11/6 19:14" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit 11/6 19:14" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

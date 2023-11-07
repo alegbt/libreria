@@ -93,4 +93,13 @@ public interface LibriMapper {
      * @mbg.generated Mon Nov 06 15:27:41 CET 2023
      */
     int updateByPrimaryKey(Libri row);
+
+//    777/////////////////////////////////////////////////
+
+
+    Integer selectLibroById(String nome);
+
+
+
+
 }

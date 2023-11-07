@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c767e97-ccbc-4b74-b2c3-c72a099c7c11" name="Changes" comment="commit">
+    <list default="true" id="4c767e97-ccbc-4b74-b2c3-c72a099c7c11" name="Changes" comment="commit pre generation of casa_editrice">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/mapper/LibriMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/mapper/LibriMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/model/Libri.java" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/model/Libri.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/model/LibriExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/model/LibriExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libreria/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/resources/generatorConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libreria/src/main/resources/mybatis/mapper/AutoriMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/resources/mybatis/mapper/AutoriMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libreria/src/main/resources/mybatis/mapper/LibriMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/resources/mybatis/mapper/LibriMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699355945359</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="commit pre generation of casa_editrice">
+      <created>1699356676590</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699356676590</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -161,7 +174,8 @@
     <MESSAGE value="insertAutoreWithBook added" />
     <MESSAGE value="commit 11/6 19:14" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="commit pre generation of casa_editrice" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit pre generation of casa_editrice" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

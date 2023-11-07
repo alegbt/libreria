@@ -243,42 +243,24 @@
 
 
 
-
-<!--  <resultMap id="AutoreResultMap" type="it.formazione.libreria.mybatis.model.Autori">-->
-<!--    <id property="id" column="id" />-->
-<!--    <result property="nomeAutore" column="nome_autore" />-->
-<!--    <collection property="libriAutore" ofType="it.formazione.libreria.model.Libri" resultMap="LibroResultMap"/>-->
-<!--  </resultMap>-->
-
-<!--  <resultMap id="LibroResultMap" type="it.formazione.libreria.mybatis.model.Libri">-->
-<!--    <id property="id" column="id" />-->
-<!--    <result property="nome" column="nome" />-->
-<!--    <result property="prezzo" column="prezzo" />-->
-<!--    <result property="autoreId" column="autore_id" />-->
-<!--  </resultMap>-->
-
-
-
-  <resultMap id="AutoreResultMap" type="it.formazione.libreria.mybatis.model.Autori">
-    <id property="id" column="id" /> <!--qui autore_id-->
-    <result property="nomeAutore" column="nome_autore" />
-    <collection property="libriAutore" ofType="it.formazione.libreria.model.Libri" resultMap="LibroResultMap"/>
-  </resultMap>
-
+<!--
+      in queste query io vado a:
+      LibroResultMap = prendo id,nome,prezzo,autoreId e le "metto" dentro a LibroResultMap
+      AutoreResultMap = prendo id, nomeAutore, libriAutore (che è una collection quindi 1 lista, con dentro resultMap="LibroResultMap" quindi tutti i libri)
+      selectAutoriWithLibri = ha come resultMap (quindi come dati su cui operare "AutoreResultMap") la quale fa la query
+-->
   <resultMap id="LibroResultMap" type="it.formazione.libreria.mybatis.model.Libri" >
-    <id property="id" column="libro_id" />   <!--qui libro_id-->
+    <id property="id" column="libro_id" />   <!--qui si chiama libro_id al posto di id perché nella query lo ho definito l.id AS libro_id-->
     <result property="nome" column="nome" />
     <result property="prezzo" column="prezzo" />
     <result property="autoreId" column="autore_id" />
   </resultMap>
 
-<!--  <select id="selectAutoriWithLibri" resultMap="AutoreResultMap">-->
-<!--    SELECT a.id, a.nome_autore,-->
-<!--    l.id AS libro_id, l.nome, l.prezzo, l.autore_id-->
-<!--    FROM autori a-->
-<!--    LEFT JOIN libri l ON a.id = l.autore_id-->
-<!--    where a.id = #{id,jdbcType=INTEGER}-->
-<!--  </select>-->
+  <resultMap id="AutoreResultMap" type="it.formazione.libreria.mybatis.model.Autori">
+    <id property="id" column="id" />
+    <result property="nomeAutore" column="nome_autore" />
+    <collection property="libriAutore" ofType="it.formazione.libreria.model.Libri" resultMap="LibroResultMap"/>
+  </resultMap>
 
   <select id="selectAutoriWithLibri" resultMap="AutoreResultMap">
     SELECT a.id, a.nome_autore,

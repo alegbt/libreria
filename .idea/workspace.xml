@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c767e97-ccbc-4b74-b2c3-c72a099c7c11" name="Changes" comment="commit pre aggiunta query per trovare autori-casa ed. - libri">
+    <list default="true" id="4c767e97-ccbc-4b74-b2c3-c72a099c7c11" name="Changes" comment="commit pre config x casa editrice">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/controller/AutoriController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/controller/AutoriController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/mapper/AutoriMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/mapper/AutoriMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/model/Libri.java" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/model/Libri.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/mapper/CasaEditriceMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/mapper/CasaEditriceMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/model/CasaEditrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/model/CasaEditrice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/model/CasaEditriceExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/java/it/formazione/libreria/mybatis/model/CasaEditriceExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libreria/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/resources/generatorConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libreria/src/main/resources/mybatis/mapper/AutoriMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/resources/mybatis/mapper/AutoriMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libreria/src/main/resources/mybatis/mapper/CasaEditriceMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/src/main/resources/mybatis/mapper/CasaEditriceMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699358244281</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="commit pre config x casa editrice">
+      <created>1699367570502</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1699367570502</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -181,7 +190,8 @@
     <MESSAGE value="commit" />
     <MESSAGE value="commit pre generation of casa_editrice" />
     <MESSAGE value="commit pre aggiunta query per trovare autori-casa ed. - libri" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit pre aggiunta query per trovare autori-casa ed. - libri" />
+    <MESSAGE value="commit pre config x casa editrice" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit pre config x casa editrice" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

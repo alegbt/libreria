@@ -279,7 +279,7 @@
 
 <!---->
 
-<!--fai query che trova libri autore e casa editrice-->
+<!--filtra in base ad id di autore, casa o libro-->
 
   <resultMap id="LibroResultMap2" type="it.formazione.libreria.mybatis.model.Libri" >
     <id property="id" column="libro_id" />
@@ -294,7 +294,7 @@
   </resultMap>
 
   <resultMap id="AutoreResultMap2" type="it.formazione.libreria.mybatis.model.Autori">
-    <id property="id" column="id" />
+    <id property="id" column="autore_id" />
     <result property="nomeAutore" column="nome_autore" />
     <collection property="libriAutore" ofType="it.formazione.libreria.model.Libri" resultMap="LibroResultMap2"/>
   </resultMap>

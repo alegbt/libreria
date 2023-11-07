@@ -279,6 +279,54 @@
 
 <!---->
 
+<!--fai query che trova libri autore e casa editrice-->
+
+  <resultMap id="LibroResultMap2" type="it.formazione.libreria.mybatis.model.Libri" >
+    <id property="id" column="libro_id" />
+    <result property="nome" column="nome" />
+    <result property="prezzo" column="prezzo" />
+    <result property="autoreId" column="autore_id" />
+    <result property="casaEdId" column="casa_ed_id" />
+    <association property="casaEditrice" javaType="it.formazione.libreria.mybatis.model.CasaEditrice">
+      <id property="id" column="casa_id" />
+      <result property="nomeCasa" column="nome_casa" />
+    </association>
+  </resultMap>
+
+  <resultMap id="AutoreResultMap2" type="it.formazione.libreria.mybatis.model.Autori">
+    <id property="id" column="id" />
+    <result property="nomeAutore" column="nome_autore" />
+    <collection property="libriAutore" ofType="it.formazione.libreria.model.Libri" resultMap="LibroResultMap2"/>
+  </resultMap>
+
+  <select id="selectViaAutoriOrLibroOrCasa" resultMap="AutoreResultMap2">
+    SELECT
+      a.id AS autore_id, a.nome_autore,
+      l.id AS libro_id, l.nome, l.prezzo, l.autore_id, l.casa_ed_id,
+      c.id AS casa_id, c.nome_casa
+    FROM
+      autori a
+    LEFT JOIN
+      libri l ON a.id = l.autore_id
+    LEFT JOIN
+      casa_editrice c ON l.casa_ed_id = c.id
+    <where>
+      <if test="autoreID != null">
+        AND a.id = #{autoreID,jdbcType=INTEGER}
+      </if>
+      <if test="libroID != null">
+        AND l.id = #{libroID,jdbcType=INTEGER}
+      </if>
+      <if test="casaID != null">
+        AND c.id = #{casaID,jdbcType=INTEGER}
+      </if>
+    </where>
+  </select>
+
+
+
+
+
 
 
 

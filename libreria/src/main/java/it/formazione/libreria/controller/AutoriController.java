@@ -142,18 +142,17 @@ public class AutoriController {
 
 	@GetMapping(value = "/allBooks", produces="application/json")
 	public List<Libri>getAuthorBooks(@PathParam("id") Integer id, @PathParam("prezzo") Integer prezzo){
-
-		List<Libri>libriAutore = this.autoriMapper.selectAutoriWithLibri(id, prezzo);
-
-//		for (Libri l:libriAutore) {
-//
-//			int n = libriMapper.selectLibroById(l.getNome());
-//
-//			l.setId(n);
-//		}
-
-	return libriAutore;
+		return this.autoriMapper.selectAutoriWithLibri(id, prezzo);
 	}
+
+
+	@GetMapping(value = "selectViaAutoriOrLibroOrCasa", produces = "application/json")
+	public List<Autori>getViaAutoriOrLibroOrCasa(@PathParam("autoreID") Integer autoreID,
+												 @PathParam("libroID")Integer libroID,
+												 @PathParam("casaID")Integer casaID){
+		return this.autoriMapper.selectViaAutoriOrLibroOrCasa(autoreID,libroID,casaID);
+	}
+
 
 
 

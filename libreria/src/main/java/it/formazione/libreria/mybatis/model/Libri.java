@@ -165,4 +165,19 @@ public class Libri {
     public void setCasaEdId(Integer casaEdId) {
         this.casaEdId = casaEdId;
     }
+
+
+    /////////////////////////////////////////////////////////////////////////////
+
+
+
+    private CasaEditrice casaEditrice;
+
+    public CasaEditrice getCasaEditrice() {
+        return casaEditrice;
+    }
+
+    public void setCasaEditrice(CasaEditrice casaEditrice) {
+        this.casaEditrice = casaEditrice;
+    }
 }

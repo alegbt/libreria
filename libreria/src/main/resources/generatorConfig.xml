@@ -21,7 +21,7 @@
     <!--  tabelle da generare - commenta quelle da non modificare  -->
 <!--    <table tableName="autori" />-->
 <!--    <table tableName="libri" />-->
-<!--    <table tableName="casa_editrice" />-->
+    <table tableName="casa_editrice" />
 
 
   </context>

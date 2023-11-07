@@ -102,8 +102,7 @@ public interface AutoriMapper {
     List<Libri> selectAutoriWithLibri(Integer idM, Integer prezzol);
 
 
-
-
+    List<Autori> selectViaAutoriOrLibroOrCasa(Integer autoreID, Integer libroID, Integer casaID);
 
 
 
